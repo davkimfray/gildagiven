@@ -1,0 +1,24 @@
+nav{
+    background: linear-gradient(to right, rgba(215, 180, 172,1) , rgba(215, 180, 172,0.9) , rgba(215, 180, 172,0));
+}
+#book-me{
+    min-height: 90vh!important;
+}
+input, textarea{
+    border: none!important;
+    border-radius: 8px!important;
+}
+.form-control:focus{
+    /*outline: none;*/
+    /*border: 2px solid #F67280!important;*/
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    nav{
+        background: transparent;
+    }
+
+}
+

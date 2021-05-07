@@ -1,0 +1,67 @@
+#top-for-you{
+    background: linear-gradient(2700deg, rgba(255, 255, 255, 0.5) 0.78%, rgba(255, 255, 255, 0.4) 99.13%), url('../assets/books/for-you-bg.png')no-repeat center;
+    background-size: cover;
+}
+#books .row{
+    justify-content: space-evenly
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+
+    #top-for-you h2{
+        font-size: 10vw;
+    }
+    #top-for-you p{
+        font-size: 6vw;
+    }
+    .download-btn-not-mobile{
+        display: none;
+    }
+    #books h4{
+        text-align: center;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #top-for-you h2{
+        font-size: 6.5vw;
+    }
+    #top-for-you p{
+        font-size: 3.5vw;
+    }
+    .download-btn-not-mobile{
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #top-for-you h2{
+        font-size: 5vw;
+    }
+    #top-for-you p{
+        font-size: 3vw;
+    }
+    .download-btn-mobile{
+        display: none;
+    }
+
+    .download-btn-not-mobile{
+        display: initial;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+

@@ -1,0 +1,67 @@
+#top{
+    background: url('../assets/gilda/gilda-mobile.jpg')no-repeat right;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+#about-us{
+    letter-spacing: 2px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #top .font-display{
+        font-size: 5vw
+    }
+    #top .font-banner{
+        font-size: 4vw
+    }
+    .i-mobile{
+        font-size: 8vw;
+    }
+    .i-not-mobile{
+        display: none;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #top .font-display{
+        font-size: 4vw
+    }
+    #top .font-banner{
+        font-size: 3vw
+    }
+    .i-mobile{
+        font-size: 7vw;
+    }
+    .i-not-mobile{
+        display: none;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .i-mobile{
+        display: none;
+    }
+    .i-not-mobile{
+        display: initial;
+        font-size: 10vw;
+    }
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #top{
+        background: url('../assets/gilda/gilda.jpg')no-repeat right;
+        background-size: contain;
+    }
+    .i-not-mobile{
+        font-size: 6vw;
+    }
+}
+
