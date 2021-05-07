@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import {getFirebase} from "../config/firebase";
-// import "../style/shared.css";
+import "../style/shared.css";
 import "../style/blog.css";
 import quotes from "../assets/home/quote.png";
-import gildaBlog from "../assets/gilda/gilda-blog.jpg";
 import NavBar from "./NavBar";
 
 

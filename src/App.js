@@ -1,6 +1,6 @@
-import logo from './assets/gi-01.png';
+import logo from '../public/gi-01.png';
 import './style/shared.css';
-import {Switch, Route, Link, Router} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import AboutUs from './components/AboutUS';
 import Landing from './components/Landing';
 import BookMe from "./components/BookMe";
@@ -8,35 +8,11 @@ import ForYou from "./components/ForYou";
 import Contacts from "./components/Contacts";
 import Blog from "./components/Blog";
 import CreatePost from "./admin/CreatPost";
-import NavBar from "./components/NavBar";
 import React from "react";
 
 function App() {
     return (
         <div>
-
-            {/*<nav className="navbar navbar-expand-lg navbar-light container-fluid position-absolute w-100 ">*/}
-            {/*    <a href="/" className="name-logo my-md-3 m-lg-4"> </a>*/}
-            {/*    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"*/}
-            {/*            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">*/}
-            {/*        <span className="navbar-toggler-icon"/>*/}
-            {/*    </button>*/}
-            {/*    <div className="collapse navbar-collapse pl-3" id="navbarNavAltMarkup">*/}
-            {/*        <div className="navbar-nav mx-auto">*/}
-            {/*            <span className="nav-link"/>*/}
-            {/*            <a className="nav-link active" href="/">Home <span className="sr-only">(current)</span>*/}
-            {/*                <hr className="sec-main-bg border-0 position-absolute mx-2 my-auto"/>*/}
-            {/*            </a>*/}
-            {/*            <a className="nav-link" href="/about-us">About</a>*/}
-            {/*            <a className="nav-link" href="/blog">Blog</a>*/}
-            {/*            <a className="nav-link" href="/book-me">Book Me</a>*/}
-            {/*            <a className="nav-link" href="/for-you">For you</a>*/}
-            {/*            <a className="nav-link" href="/contacts">Contact</a>*/}
-            {/*            <a className="nav-link" href="/new-post">new post</a>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
-
             {/*<Router>*/}
                  <Switch>
                 <Route exact path="/" component={Landing}/>

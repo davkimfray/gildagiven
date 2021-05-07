@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { getFirebase } from "../config/firebase.js";
-import { getStorage } from "../config/firebase.js";
 import "../style/shared.css";
 import "../style/blog.css";
 
