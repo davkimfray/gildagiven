@@ -19,7 +19,7 @@ import { icons } from './assets/icons'
 import { Provider } from 'react-redux'
 import store from './store'
 
-React.icons = icons
+React.icons = icons;
 
 ReactDOM.render(
     <Store.Provider initialState={auth}>

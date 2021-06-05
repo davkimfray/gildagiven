@@ -1,6 +1,8 @@
-import firebase from "firebase";
-// import database from "firebase/database";
+import firebase from "firebase/app";
+import "firebase/database";
 import 'firebase/storage';
+import 'firebase/auth';
+import 'firebase/functions';
 
 const config = {
     apiKey: "AIzaSyCSNu7IjlsgbTUJS3pyDiz5fkPa2XHABpg",
@@ -13,27 +15,9 @@ const config = {
     measurementId: "G-6D2X0ZERFJ"
 };
 
-let firebaseCache;
-let storageCache;
-// firebase.analytics();
-
 export const getFirebase = () => {
-    if (firebaseCache) {
-        return firebaseCache;
-    }
-    firebase.initializeApp(config);
-    firebaseCache = firebase;
-    return firebaseCache;
+    return firebase.initializeApp(config);
 };
-export const getStorage = () => {
-    if (storageCache) {
-        return storageCache;
-    }
-    storageCache = firebase.storage();
-    return storageCache;
-};
-
-
 //upload image firebase rules
 // service firebase.storage {
 //     match /b/{bucket}/o {

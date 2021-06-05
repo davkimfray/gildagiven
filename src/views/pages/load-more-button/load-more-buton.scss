@@ -1,0 +1,270 @@
+#top-for-you{
+    background: linear-gradient(2700deg, rgba(255, 255, 255, .5) 0.78%, rgba(215, 180, 172, 1) 99.13%), url('../../../assets/books/for-you-bg.png')no-repeat center;
+    background-size: cover;
+}
+#books .row{
+    justify-content: space-evenly
+}
+.bg-white{
+    color: black;
+}
+
+.buttonDownload {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buttonDownload:hover {
+    cursor: pointer;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+    width: 19px;
+    height: 5px;
+    border-style: solid;
+    border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    margin-top: -7px;
+
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: transparent;
+    border-top-color: inherit;
+
+    animation: downloadArrow 1.2s linear infinite;
+    animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+    border-color: #ffffff;
+}
+
+.buttonDownload:hover:after {
+    border-top-color: #ffffff;
+    animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+    /* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+    0% {
+        margin-top: -7px;
+        opacity: 1;
+    }
+
+    0.001% {
+        margin-top: -15px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 0;
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+
+    #top-for-you h2{
+        font-size: 10vw;
+    }
+    #top-for-you p{
+        font-size: 6vw;
+    }
+    .download-btn-not-mobile{
+        display: none;
+    }
+    #books h4{
+        text-align: center;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #top-for-you h2{
+        font-size: 6.5vw;
+    }
+    #top-for-you p{
+        font-size: 3.5vw;
+    }
+    .download-btn-not-mobile{
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #top-for-you h2{
+        font-size: 5vw;
+    }
+    #top-for-you p{
+        font-size: 3vw;
+    }
+    .download-btn-mobile{
+        display: none;
+    }
+    #books {min-height: 50vh!important;}
+
+    .download-btn-not-mobile{
+        display: initial;
+    }
+}
+
+
+
+
+
+
+/*load more button*/
+.buttons {
+    margin-top: 50px;
+    text-align: center;
+    border-radius:30px;
+}
+
+$cyan: #996573;
+$dark: #ffffff;
+$borderW: 2px;
+
+.blob-btn {
+    $numOfBlobs: 4;
+    z-index: 1;
+    position: relative;
+    padding: 16px 36px;
+    //margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $cyan;
+    //font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius:30px;
+
+&:before {
+     content: "";
+     z-index: 1;
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     border: $borderW solid $cyan;
+     border-radius:30px;
+ }
+
+&:after {
+     content: "";
+     z-index: -2;
+     position: absolute;
+     left: $borderW*1.5;
+     top: $borderW*1.5;
+     width: 100%;
+     height: 100%;
+
+     transition: all 0.3s 0.2s;
+     border-radius:30px;
+ }
+
+&:hover  {
+  .spinner{
+    color: $dark !important;
+    transition: all 0.3s 0.2s;
+
+  }
+     color: $dark;
+     border-radius:30px;
+
+&:after {
+     transition: all 0.3s;
+     left: 0;
+     top: 0;
+     border-radius:30px;
+ }
+}
+
+&__inner {
+     z-index: -1;
+     overflow: hidden;
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     border-radius:30px;
+     background:transparent;
+ }
+
+// additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
+  &__blobs {
+       position: relative;
+       display: block;
+       height: 100%;
+       filter: url('#goo');
+   }
+
+&__blob {
+     position: absolute;
+     top: $borderW;
+     width: 100% / $numOfBlobs;
+     height: 100%;
+     background: $cyan;
+     border-radius: 100%;
+     transform: translate3d(0,150%,0) scale(1.7);
+     transition: transform 0.45s;
+
+@supports(filter: url('#goo')) {
+    transform: translate3d(0,150%,0) scale(1.4);
+}
+
+@for $i from 1 through $numOfBlobs {
+&:nth-child(#{$i}) {
+    left: ($i - 1) * (120% / $numOfBlobs);
+    transition-delay: ($i - 1) * 0.08s;
+}
+}
+
+.blob-btn:hover & {
+    transform: translateZ(0) scale(1.7);
+
+@supports(filter: url('#goo')) {
+    transform: translateZ(0) scale(1.4);
+}
+}
+}
+
+}
