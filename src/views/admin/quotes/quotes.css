@@ -1,0 +1,55 @@
+.ck-editor__editable {
+    min-height: 240px !important;
+}
+
+.quote-card {
+    -webkit-box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 12px rgba(0,0,0,0.15);
+}
+.quote-card .quote-content .title {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #333333;
+    font-size: 26px;
+    font-weight: 700;
+}
+.quote-card .quote-content .sub_title {
+    margin: 0;
+    padding: 0 0 20px;
+    /*color: #e74c3c;*/
+    font-size: 20px;
+    font-weight: 500;
+}
+.quote-card .quote-content p {
+    /*display: none;*/
+    color: rgba(0,0,0,0.7);
+    font-size: 16px!important;
+    line-height: 1.8em;
+}
+.quote-card .quote-content .quote-meta {
+    margin: 30px 0 0;
+    color: #999999;
+}
+.quote-card .quote-content .quote-meta a {
+    color: #999999;
+    text-decoration: none;
+}
+.hover .quote-content p {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+    .top-image-not-mobile{
+        display: none;
+    }
+    .thumbnail{
+        height: 240px!important;
+    }
+}
+
+

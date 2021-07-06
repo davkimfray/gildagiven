@@ -1,0 +1,23 @@
+.bg-right-card {
+    background: rgba(153, 101, 115, .3);
+}
+/*.lets-hang-out svg .facebook, .lets-hang-out svg .youtube, .lets-hang-out svg .instagram, .lets-hang-out svg .twitter{*/
+/*    fill: rgba(0,0,0,0.7)!important;*/
+/*    transition: all 0.3s ease-in-out;*/
+/*}*/
+.lets-hang-out a {
+    margin: auto!important;
+    padding-bottom: 8px;
+    border-right: solid black 1px;
+}
+.lets-hang-out a:last-child{
+    border-right: none;
+}
+.figure-wrapper img{
+    width: 100%!important;
+}
+.figure-wrapper figcaption{
+    width: 90%!important;
+    color: rgba(0,0,0,0.6);
+    margin: auto auto 16px auto;
+}

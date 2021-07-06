@@ -2,12 +2,13 @@ import React  from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './scss/style.scss';
 import './scss/shared.css';
-import './views/pages/login/login.css';
+import './App.css';
+// import './views/pages/login/login.css';
 import {useSession} from "./components/store/Session";
 // import {useSession} from "./components/store/Session";
 
 const loading = (
-    <section className="auth-wrapper ">
+    <section className="auth-wrapper main-bg">
         <div className="auth-content">
             <div className="auth-bg">
                 <span className="r main-bg"/>
@@ -61,11 +62,12 @@ export default function App() {
               <Route exact path="/book-me" name="Book Me Page" render={props => <BookMe {...props}/>} />
               <Route exact path="/for-you" name="For You Page" render={props => <ForYou {...props}/>} />
               <Route exact path="/contacts" name="Contacts Page" render={props => <Contacts {...props}/>} />
-              <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
-              <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
                 <Route exact path="/admin/login" name="Login Page" render={props => <Login {...props}/> } />
               <Route path="/admin" name="Admin" render={props => <TheLayout {...props}/>} />
-            </Switch>
+              <Route path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
+              <Route path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
+              <Route path="*" name="Page 404" render={props => <Page404 {...props}/>} />
+</Switch>
           </React.Suspense>
       </BrowserRouter>
     );

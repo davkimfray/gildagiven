@@ -1,20 +1,20 @@
 {
-  "name": "@coreui/coreui-free-react-admin-template",
+  "name": "gilda_given",
   "version": "3.2.1",
-  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
+  "description": "The lady who chooses to embrace her own Nature",
   "author": {
-    "name": "CoreUI",
-    "url": "https://coreui.io",
-    "github": "https://github.com/coreui",
-    "twitter": "https://twitter.com/core_ui"
+    "name": "davkimfray",
+    "url": "https://gildagiven.com",
+    "github": "https://github.com/gee",
+    "twitter": "https://twitter.com/davkimfray1?s=09"
   },
   "contributors": [
     {
-      "name": "CoreUI Team",
-      "url": "https://github.com/orgs/coreui/people"
+      "name": "davkimfray",
+      "url": "https://github.com/orgs/davkimfray"
     }
   ],
-  "copyright": "Copyright 2017-2020 creativeLabs Łukasz Holeczek",
+  "copyright": "Copyright 2021 Gilda Given",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -55,6 +55,7 @@
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "auto-changelog": "~2.2.1",
+    "moment": "^2.29.1",
     "react-scripts": "^4.0.3"
   },
   "scripts": {

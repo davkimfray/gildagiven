@@ -1,0 +1,170 @@
+
+#home {
+    background: #ffffff url('../../../assets/gilda/gilda-mobile.jpg') no-repeat right;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+#check-out-my-books, #extra-me{
+    min-height: 50vh!important;
+}
+#check-out-my-books .heading {
+    background: url('../../../assets/books/books-title.jpg') no-repeat left;
+    background-size: cover;
+}
+
+.extra-me-img {
+    height: 300px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+/*#about-me {*/
+/*    !* background-color: #E0E3E7; *!*/
+/*    !*background:;*!*/
+/*    ;*/
+/*}*/
+
+.card-about-wrapper {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px #E0E3E7;
+}
+
+.card-about-wrapper .verticle-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.card-about-wrapper .card-text {
+    letter-spacing: 2px;
+    margin: 24px auto;
+}
+
+.card-about-wrapper .card-text span {
+    background: rgba(239, 53, 73, 0.2);
+}
+
+button.close{
+    opacity: 0.7!important;
+    color: rgb(153 101 115)!important;
+    float: none!important;
+    margin: auto 8px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    #home .font-display {
+        font-size: 5vw!important;
+    }
+
+    #home .font-banner {
+        font-size: 4vw!important;
+    }
+
+    #check-out-my-books .heading {
+        font-size: 8vw !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #home .font-display {
+        font-size: 4vw!important;
+    }
+
+    #home .font-banner {
+        font-size: 3vw!important;
+    }
+
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #home svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    #about .card-title {
+        font-size: 3vw!important;
+    }
+
+    #about-me .card-text {
+        font-size: 2vw!important;
+        line-height: 4vw;
+    }
+    .extra-me-img {
+        height: 290px !important;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #home{
+        padding-top: 5vh;
+    }
+    nav{
+        background: linear-gradient(to right, rgba(255,255,255,1) , rgba(255,255,255,0.9) , rgba(255,255,255,0))!important;
+        z-index: 10;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #home {
+        background: #ffffff url('../../../assets/gilda/gilda.jpg') no-repeat right;
+        background-size: contain;
+    }
+
+    #home svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .img {
+        width: 25vw;
+        /* height: 20vw; */
+    }
+    svg .facebook, svg .youtube, svg .instagram, svg .twitter{
+        fill: rgba(0,0,0,1)!important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #about-me .card-text {
+        font-size: 1.5vw!important;
+        line-height: 3vw;
+    }
+
+    #about-me .card-title {
+        font-size: 1.5vw!important;
+    }
+    .extra-me-img {
+        height: 300px !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1400px) {
+    .extra-me-img {
+        height: 400px !important;
+    }
+}
+
+
+[data-aos="animate-top-text"] {
+        display:block;
+        overflow:hidden;
+        white-space:nowrap;
+        width:0;
+    transition-property: width;
+}
+
+[data-aos="animate-top-text"].aos-animate {
+    width: 100%;
+}

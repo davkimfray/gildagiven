@@ -1,0 +1,255 @@
+/*nav{*/
+/*    background: linear-gradient(to right, rgba(215, 180, 172,1) , rgba(215, 180, 172,0.9) , rgba(215, 180, 172,0));*/
+/*    z-index: 10;*/
+/*}*/
+#top-blog{
+    display: flex;
+    flex-direction: column;
+}
+#top-blog h2{
+    /*font-size: 5vw!important;*/
+    letter-spacing: 16px
+}
+.top-image{
+    height: 55vw;
+    width: 100%;
+    background: url('../../../assets/gilda/gilda3.png')no-repeat center bottom;
+    background-size: contain;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .top-image-not-mobile{
+        display: none;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #top-blog{
+        min-height: 40vh!important;
+    }
+    .top-image-mobile{
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .post-card{
+        width: 46%;
+    }
+    #top-blog h2{
+        font-size: 4vw!important;
+    }
+    #top-blog p{
+        font-size: 2.5vw!important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    nav{
+        background: transparent;
+    }
+    .top-image {
+        height: 100vh;
+    }
+    .post-card{
+        width: 28%;
+    }
+    #top-blog p{
+        font-size: 2vw!important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1600px) {
+    #top-blog p{
+        /*font-size: 1.5vw!important;*/
+    }
+}
+
+
+
+
+#blog{
+    justify-content: space-evenly;
+}
+
+
+.post-card-wrapper{
+    justify-content: space-evenly!important;
+}
+.post-card {
+    position: relative;
+    z-index: 1;
+    display: block;
+    /*background: #FFFFFF;*/
+    min-width: 270px;
+    /*min-height: 300px;*/
+    height: 520px;
+    -webkit-box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 12px rgba(0,0,0,0.15);
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+.post-card:hover,
+.hover {
+    -webkit-box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
+}
+.post-card:hover .thumbnail img,
+.hover .thumbnail img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .6;
+}
+.post-card .thumbnail {
+    /*background: #000000;*/
+    height: 400px;
+    width: 99.8%;
+    overflow: hidden;
+    /*position: absolute;*/
+}
+
+.post-card .thumbnail img {
+    display: block;
+    width: 120%;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+.post-card .post-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+}
+.post-card .post-content .category {
+    position: absolute;
+    top: -34px;
+    left: 0;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-size: 14px!important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.post-card .post-content .title {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #333333;
+    font-size: 26px!important;
+    font-weight: 700;
+}
+.post-card .post-content .sub_title {
+    margin: 0;
+    padding: 0 0 20px;
+    /*color: #e74c3c;*/
+    font-size: 20px!important;
+    font-weight: 400;
+}
+.post-card .post-content p {
+    /*display: none;*/
+    color: rgba(0,0,0,.55);
+    font-size: 20px!important;
+    line-height: 1.8em;
+}
+.post-card .post-content .post-meta {
+    margin: 30px 0 0;
+    color: #999999;
+}
+
+.post-card .post-content .post-meta a {
+    color: #999999;
+    text-decoration: none;
+}
+.hover .post-content p {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+
+.card-wrapper{
+    display: flex;
+    /*flex-direction: column;*/
+    flex-flow: column wrap;
+    max-height: 700px;
+    /*margin-left: -8px; !* Adjustment for the gutter *!*/
+    width: 100%;
+}
+
+.card {
+    /*height: 520px;*/
+    /*margin: 10px;*/
+    flex: 1 auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    /*border: red 0px solid;*/
+}
+.card-header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+.card:hover,
+.hover {
+    -webkit-box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
+}
+.card:hover .card-header img,
+.hover .card-header img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    /*opacity: .6;*/
+}
+.card .title {
+    margin: 0;
+    padding: 10px 0 10px;
+    color: #333333;
+    font-size: 22px!important;
+    font-weight: 700;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 250px;
+}
+.card-body p {
+    font-size: 20px!important;
+}

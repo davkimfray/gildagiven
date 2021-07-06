@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Arizonia');
+.quotes{
+    z-index: 1;
+    margin: auto;
+}
+.quotes-border{
+    border: 2px solid #0e0e0e;
+    z-index: 0;
+    position: absolute;
+}
+.quotes-border p{
+    opacity: 0;
+    font-size: 3vw;
+    /*max-width: 30vw;*/
+}
+.quotes-heading {
+    font-size: 6vw;
+}
+.quotes-text{
+    font-size: 8vw!important;
+    /*max-width: 50vw;*/
+    font-family: Arizonia!important;
+    color: black;
+}
+.quotes-open{
+    width: 4vw;
+    transform: scale(1, -1)
+}
+.quotes-close{
+    width: 4vw;
+    transform: scale(-1, 1)
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .quotes-text {
+        font-size: 5vw!important;
+    }
+    .quotes-heading {
+        font-size: 5vw!important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .quotes-text {
+        font-size: 4vw!important;
+    }
+    .quotes-heading {
+        font-size: 4vw!important;
+    }
+}

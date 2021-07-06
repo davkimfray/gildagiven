@@ -1,0 +1,47 @@
+footer{
+    min-height: 5vh;
+}
+/*footer a{*/
+/*    text-decoration: none!important;*/
+/*    color: #ffffff;*/
+/*}*/
+svg {
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+footer .facebook, footer .youtube, footer .instagram, footer .twitter, footer .amazon, footer .linkedin{
+    color: rgb(215 180 172)!important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .not-mobile-footer{
+        display: none;
+    }
+    /*footer svg{*/
+    /*    width: 40px!important;*/
+    /*    height: 40px!important;*/
+    /*}*/
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+      .mobile-footer{
+        display: none!important;
+    }
+    /*svg{*/
+    /*    width: 50px!important;*/
+    /*    height: 50px!important;*/
+    /*}*/
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+      footer{
+        min-height: 6vh;
+    }
+    }

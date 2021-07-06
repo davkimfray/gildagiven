@@ -1,0 +1,28 @@
+#book-me{
+    min-height: 90vh!important;
+    justify-content: space-evenly;
+    h2{font-size: 5vw;}
+    p{font-size: 3vw!important;}
+    img{
+        width: 22vh;
+        bottom: 0;
+        right: 0;
+    }
+}
+input, textarea{
+    font-size: 20px!important;
+    border: none!important;
+    border-radius: 8px!important;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #book-me{
+        h2{    font-size: 4vw!important;}
+        p{    font-size: 2.5vw!important;}
+        img{
+            width: 33vh;
+        }
+    }
+}
+

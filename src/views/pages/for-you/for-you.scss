@@ -1,0 +1,151 @@
+#top-for-you{
+    background: linear-gradient(2700deg, rgba(255, 255, 255, .5) 0.78%, rgba(215, 180, 172, 1) 99.13%), url('../../../assets/books/for-you-bg.png')no-repeat center;
+    background-size: cover;
+}
+#books .row{
+    justify-content: space-evenly
+}
+.bg-white{
+    color: black;
+}
+button.close{
+    opacity: 0.7!important;
+    color: rgb(153 101 115)!important;
+    float: none!important;
+    margin: auto 8px;
+}
+
+button.close:hover{
+    opacity: 1!important;
+}
+.buttonDownload {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buttonDownload:hover {
+    cursor: pointer;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+    width: 19px;
+    height: 5px;
+    border-style: solid;
+    border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    margin-top: -7px;
+
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: transparent;
+    border-top-color: inherit;
+
+    animation: downloadArrow 1.2s linear infinite;
+    animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+    border-color: #ffffff;
+}
+
+.buttonDownload:hover:after {
+    border-top-color: #ffffff;
+    animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+    /* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+    0% {
+        margin-top: -7px;
+        opacity: 1;
+    }
+
+    0.001% {
+        margin-top: -15px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 0;
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+
+    #top-for-you h2{
+        font-size: 10vw!important;
+    }
+    #top-for-you p{
+        font-size: 6vw!important;
+    }
+    .download-btn-not-mobile{
+        display: none;
+    }
+    #books h4{
+        text-align: center;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #top-for-you h2{
+        font-size: 6.5vw!important;
+    }
+    #top-for-you p{
+        font-size: 3.5vw!important;
+    }
+    .download-btn-not-mobile{
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #top-for-you h2{
+        font-size: 5vw!important;
+    }
+    #top-for-you p{
+        font-size: 3vw!important;
+    }
+    .download-btn-mobile{
+        display: none;
+    }
+    #books {min-height: 50vh!important;}
+
+    .download-btn-not-mobile{
+        display: initial;
+    }
+}
